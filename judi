@@ -1,0 +1,22 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+
+int main(){
+ 
+    int a;
+    while (true){
+       cout<<"lempar dadunya\n 1 lempar\n 2 gamau\n: ";
+       cin>> a;
+       
+       if (1==a){
+        cout <<"nilai yang kamu dapat yaitu = " <<  1+(rand() % 8) << endl; 
+       }else if (2==a){
+         cout << "LEMPAR GA!!!" << endl;
+       }else{
+        cout << "yang bener dong. mau apa ga jadinya" <<endl;
+       }
+    }
+    cin.get();
+    return 0;
+}
