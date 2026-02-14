@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int fn, fn1, fn2;
+    int n;
+ 
+    cout << "deret fibonacci " << endl;;
+    cout << "masukkan deret ke-n : ";
+    cin >> n;
+    
+
+    fn1=0;
+    fn2=1;
+    fn=fn2+fn1;
+    cout << fn << " ";
+    for (int i = 0; i < n; i++){
+        fn = fn2+fn1;
+        fn1= fn2;
+        fn2 = fn;
+
+        cout << fn << " ";
+    }
+    
+}
