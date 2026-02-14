@@ -1,0 +1,114 @@
+#include <iostream>
+
+using namespace std;
+
+int pertandingan (int lawan, int lawan2){
+    int tim;
+    while(true){
+        cin>>tim;
+        if(tim==lawan || tim==lawan2){
+            return tim;
+        }
+        cout << "Input salah! Masukkan tim yang bertanding : " 
+             << lawan << " atau " << lawan2 << ".\n ";
+    }
+}
+
+int main() {
+    cout << "daftar tim = 1-16, dengan masing masing 2 tim bertanding di babak penyisihan, tim yang menang lolos ke babak berikutnya"<<endl;
+    cout << "masukkan daftar tim yang lolos penyisihan" << endl;
+
+    cout << "pertandingan 1 dan 2"<<endl;
+    int penyisihan1 = pertandingan (1,2);
+	
+    cout << "pertandingan 3 dan 4"<<endl;
+    int penyisihan2 = pertandingan (3,4);
+	
+    cout << "pertandingan 5 dan 6"<<endl;
+    int penyisihan3 = pertandingan (5,6);
+	
+    cout << "pertandingan 7 dan 8"<<endl;
+    int penyisihan4 = pertandingan (7,8);
+
+    cout << "pertandingan 9 dan 10"<<endl;
+    int penyisihan5 = pertandingan (9,10);
+
+    cout << "pertandingan 11 dan 12"<<endl;
+    int penyisihan6 = pertandingan (11,12);
+
+    cout << "pertandingan 13 dan 14"<<endl;
+    int penyisihan7 = pertandingan (13,14);
+
+    cout << "pertandingan 15 dan 16"<<endl;
+    int penyisihan8 = pertandingan (15,16);
+    
+    cout << "\nhasil penyisihan:\n";
+    cout << "tim pemenang pertandingan 1 dan 2: " << penyisihan1 << endl;
+    cout << "tim pemenang pertandingan 3 dan 4: " << penyisihan2 << endl;
+    cout << "tim pemenang pertandingan 5 dan 6: " << penyisihan3 << endl;
+    cout << "tim pemenang pertandingan 7 dan 8: " << penyisihan4 << endl;
+    cout << "tim pemenang pertandingan 9 dan 10: " << penyisihan5 << endl;
+    cout << "tim pemenang pertandingan 11 dan 12: " << penyisihan6 << endl;
+    cout << "tim pemenang pertandingan 13 dan 14: " << penyisihan7 << endl;
+    cout << "tim pemenang pertandingan 15 dan 16: " << penyisihan8 << endl;
+	
+    cout << "\nlanjutkan ke semi final? \n(1 = Ya, 0 = Tidak): ";
+    int lanjut;
+    cin >> lanjut;
+    if (lanjut == 0) return 0;
+
+    cout << "BABAK SEMI FINAL" << endl;
+    
+    cout << "Pertandingan antara " << penyisihan1 << " dan " << penyisihan2 << endl;
+    int semi1 = pertandingan(penyisihan1, penyisihan2);
+
+    cout << "Pertandingan antara " << penyisihan3 << " dan " << penyisihan4 << endl;
+    int semi2 = pertandingan(penyisihan3, penyisihan4);
+
+    cout << "Pertandingan antara " << penyisihan5 << " dan " << penyisihan6 << endl;
+    int semi3 = pertandingan(penyisihan5, penyisihan6);
+
+    cout << "Pertandingan antara " << penyisihan7 << " dan " << penyisihan8 << endl;
+    int semi4 = pertandingan(penyisihan7, penyisihan8);
+
+    cout << "\nHasil Perempat Final (Lolos ke Semi Final):" << endl;
+    cout << "Tim Pemenang Pertandingan antara " << penyisihan1 << " dan " << penyisihan2 << ": "<< semi1 << endl;
+    cout << "Tim Pemenang Pertandingan antara " << penyisihan3 << " dan " << penyisihan4 << ": "<< semi2 << endl;
+    cout << "Tim Pemenang Pertandingan antara " << penyisihan5 << " dan " << penyisihan6 << ": "<< semi3 << endl;
+    cout << "Tim Pemenang Pertandingan antara " << penyisihan7 << " dan " << penyisihan8 << ": "<< semi4 << endl;
+   
+
+    cout << "\nLanjutkan ke 4 besar? \n(1 = Ya, 0 = Tidak): ";
+    cin >> lanjut;
+    if (lanjut == 0) return 0;
+
+    cout << " \n BABAK 4 BESAR" << endl;
+
+    cout << "pertandingan 4 besar ke 1: " << semi1 << " dan " << semi2 << endl;
+    int besar1 = pertandingan(semi1, semi2);
+
+    cout << "pertandingan 4 besar ke 2: " << semi3 << " dan " << semi4 << endl;
+    int besar2 = pertandingan(semi3, semi4);
+
+    cout << "\nHasil Semi Final (Lolos ke Final):" << endl;
+    cout << " Pemenang pertandingan 4 besar ke 1: " << semi1 << " dan " << semi2 << besar1 << endl;
+    cout << " Pemenang pertandingan 4 besar ke 1: " << semi3 << " dan " << semi4 << besar2 << endl;
+
+    cout << "\nLanjutkan ke FINAL? \n(1 = Ya, 0 = Tidak): ";
+    cin >> lanjut;
+    if (lanjut == 0) return 0;
+
+    cout << "FINAL" << endl;
+    cout << "Pertandingan Final: " << semi1 << " dan " << semi2 << endl;
+    int juara = pertandingan(semi1, semi2);
+
+
+    cout << " \n SELAMAT! JUARA TURNAMEN ADALAH TIM: ";
+    cout << "========" << juara << "========" << endl;
+
+    return 0;
+}
+
+    
+	
+
