@@ -1,0 +1,156 @@
+// #include <iostream>
+// using namespace std;                                x
+                                                    //xx
+// int main(){                                        xxx
+//     int n;
+
+//     cout<<"berapa baris: ";
+//     cin>>n;
+//     cout<<"baris ke 1\n";
+
+//     for(int i=1;i<=n;i++){
+//         for(int k=1;k<=i;k++){
+//             cout<<"#";
+//         }
+//          cout<<endl;
+//     } 
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int h;
+
+//     cout<<"berapa baris: ";
+//     cin>> h;
+//     for(int i=1; i<=h ;i++){                                     // ini untuk kolom 
+//       for(int j=h;j>=i;j--){                                     // dan ini untuk baris
+//         cout<<"*";                                                
+//       }   
+//       cout<<endl;
+//     }
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int n;
+
+//     cout<<"berapa baris: ";
+//     cin>>n;
+
+//     for(int i=1;i<=n;i++){
+//         for(int k=1;k<=i;k++){
+//             cout<<" ";
+//         }
+//     for(int l=n;l>=i;l--){
+//         cout<<"x";
+       
+//     }
+//      cout<<endl;
+// }
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int n;
+
+//     cout<<"masukkan berapa baris: ";
+//     cin>>n;
+
+//     for(int i=1;i<=n;i++){
+//         for(int k=n;k>=i;k--){
+//             cout<<" ";
+//         }
+//         for(int p=1;p<=i;p++){
+//             cout<<"$";
+//         }
+//         cout<<endl;
+//     }
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int k;
+
+//     cout<<"berapa : ";
+//     cin>>k;
+//     for (int i = 1; i <= k; i++){
+//         for (int r = k; r >= i; r--){
+//             cout<<" ";
+//         }
+//         for (int s = 1; s <= (2*i-1); s++)
+//         {
+//             cout<<"h";
+//         }
+        
+//         cout<<endl;
+//     }
+    
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main (){
+//     int n;
+
+//     cout<<"deret berapa: ";
+//     cin>>n;
+
+//     for (int i = 1; i <= n; i++){
+//         for (int k = 1; k <= i; k++){
+//             cout<<" ";
+//         }
+//         for (int u = 1; u >=(2*i-5) ; u--){
+//             cout<<"@";
+//         }
+        
+//         cout<<endl;
+//     }   
+// }
+
+
+#include<iostream>
+using namespace std;
+
+ int main(){
+    int k;
+
+    cout<<"berapa : ";
+    cin>>k;
+    for (int i = 1; i <= k; i++){
+        for (int r = k; r > i; r--){
+            cout<<" ";
+        }
+        for (int s = 1; s <= (2*i-1); s++)
+        {
+            cout<<"h";
+        }
+        
+        cout<<endl;
+    }
+     for (int i= 2; i <= k; i++){
+        for (int l = 1; l < i; l++){
+            cout<<" ";
+        }
+        for (int u = k; u >=(2*i-k) ; u--){
+            cout<<"h";
+        }
+        cout<<endl;   
+}
+ }
